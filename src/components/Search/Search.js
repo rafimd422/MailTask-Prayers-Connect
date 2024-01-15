@@ -1,14 +1,16 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete, { createFilterOptions } from '@mui/material/Autocomplete';
-import { styled } from '@mui/material';
+import { Box, styled } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
 const filter = createFilterOptions();
 
 const top100Films = [
-  { title: 'Hello', key: 2 },
-  { title: 'The Godfather: Part II', key: 4 },
+  { title: 'Hackerrank', key: 2 },
+  { title: 'Codeforces', key: 4 },
+  { title: 'Google', key: 3 },
+  { title: 'Microsoft', key: 1 },
 ];
 
 const SearchAutoComplate = () => {
@@ -19,7 +21,7 @@ const SearchAutoComplate = () => {
     padding: theme.spacing(0, 2),
     height: '100%',
     position: 'absolute',
-    right: 0,
+    right: 10,
     pointerEvents: 'none',
     display: 'flex',
     alignItems: 'center',
@@ -87,12 +89,12 @@ const SearchAutoComplate = () => {
       sx={{ width: 300 }}
       freeSolo
       renderInput={(params) => (
-        <>
+        <Box sx={{ width: 300 }}>
           <SearchIconWrapper>
             <SearchIcon />
           </SearchIconWrapper>
           <TextField {...params} label="Search" placeholder="Search…" />
-        </>
+        </Box>
       )}
     />
   );

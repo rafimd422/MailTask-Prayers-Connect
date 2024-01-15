@@ -17,8 +17,7 @@ export default function Home() {
       <Grid container spacing={2}>
   <Grid item xs={8}>
     {/* Your sidebar content goes here */}
-    Sidebar
-  </Grid>
+ </Grid>
 
   <Grid item xs={4}>
     {/* Your main content goes here */}
