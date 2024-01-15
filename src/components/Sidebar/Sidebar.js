@@ -14,6 +14,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import theme from '@/theme';
+import ComposeModal from '../ComposeModal/ComposeModal';
 
 const drawerWidth = 240;
 
@@ -44,20 +45,17 @@ const handleMore = () => {
 
 }
 
-const handleCompose = () => {
-    console.log("Compose Button Is Clicked")
-}
-
   const drawer = (
     <div>
       <Toolbar />
       <Divider />
+ <ComposeModal />
 
 
 {more ?  <List>
-        {['Inbox', 'Starred', 'Compose', 'Drafts', "Extend"].map((text, index) => (
+        {['Inbox', 'Starred', 'Drafts', "Extend"].map((text, index) => (
           <ListItem key={text} disablePadding>
-           <ListItemButton onClick={text === 'Compose' ? handleCompose : text === "Extend" ? handleMore : null}>
+           <ListItemButton onClick={ text === "Extend" ? handleMore : null}>
               <ListItemIcon sx={text === 'Extend' ? { color: theme.palette.error.main } : {color: theme.palette.text.main }} >
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
@@ -66,9 +64,9 @@ const handleCompose = () => {
           </ListItem>
         ))}
       </List> : <List>
-        {['Inbox', 'Starred', 'Compose', 'Drafts', "More"].map((text, index) => (
+        {['Inbox', 'Starred', 'Drafts', "More"].map((text, index) => (
           <ListItem key={text} disablePadding>
-           <ListItemButton onClick={text === 'Compose' ? handleCompose : text === 'More' ? handleMore : null}>
+           <ListItemButton onClick={ text === 'More' ? handleMore : null}>
               <ListItemIcon sx={{ color: 'white' }}>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
