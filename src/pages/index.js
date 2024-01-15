@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import { Grid, Container } from '@mui/material';
+import { Box } from '@mui/system';
 import Head from 'next/head';
 
 export default function Home() {
@@ -11,20 +12,21 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <Container>
-        <Grid>
-          {/* Sidebar */}
-          <Grid item xs={8}>
-            Sidebar
-          </Grid>
+<Box container>
+<Header />
+      <Grid container spacing={2}>
+  <Grid item xs={8}>
+    {/* Your sidebar content goes here */}
+    Sidebar
+  </Grid>
 
-          {/* Main Content */}
-          <Grid item xs={4}>
-            Main Content
-          </Grid>
-        </Grid>
-      </Container>
+  <Grid item xs={4}>
+    {/* Your main content goes here */}
+    Main Content
+  </Grid>
+</Grid>
+</Box>
+
     </>
   );
 }
