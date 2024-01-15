@@ -20,14 +20,14 @@ const Search = styled('div')(({ theme }) => ({
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
   '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+    backgroundColor: alpha(theme.palette.common.white, 0.26),
   },
   marginRight: theme.spacing(2),
   marginLeft: 0,
   width: '100%',
-  [theme.breakpoints.up('sm')]: {
+  [theme.breakpoints.up('xs')]: {
     marginLeft: theme.spacing(3),
-    width: 'auto',
+    width: 'fit-content',
   },
 }));
 
@@ -127,22 +127,7 @@ export default function PrimarySearchAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          {/* <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          > */}
 <Sidebar />
-          <Typography
-  variant="h6"
-  noWrap
-  component="div"
-  sx={{ display: { xs: 'none', sm: 'block' } }}
->
-  <span style={{ color: 'red' }}>Mail</span>Mate
-</Typography>
 
           <Search>
            

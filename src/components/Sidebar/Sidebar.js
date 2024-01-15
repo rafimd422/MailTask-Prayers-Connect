@@ -15,6 +15,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import theme from '@/theme';
 import ComposeModal from '../ComposeModal/ComposeModal';
+import { Typography } from '@mui/material';
 
 const drawerWidth = 240;
 
@@ -47,6 +48,19 @@ const handleMore = () => {
 
   const drawer = (
     <div>
+    <Typography
+      variant="h6"
+      noWrap
+      align="center"
+      sx={{
+        display: { xs: 'none', sm: 'block' },
+        pt: '1rem',
+        color: 'text.main',
+      }}
+    >
+      <span style={{ color: 'red' }}>Mail</span>Mate
+    </Typography>
+
       <Toolbar />
       <Divider />
  <ComposeModal />
@@ -101,13 +115,12 @@ const handleMore = () => {
 
         <Toolbar>
           <IconButton
-            color={'#fff'}
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: 'none' } }}
           >
-            <MenuIcon />
+            <MenuIcon sx={{color:'white'}} />
           </IconButton>
         </Toolbar>
       <Box
