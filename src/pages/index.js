@@ -1,5 +1,4 @@
 import MainContent from '@/components/MainContentTab/MainContent';
-import { Grid, Container, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import Head from 'next/head';
 
@@ -12,7 +11,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-<Box container sx={{display:'flex', justifyContent:{sm:'flex-end'}}}>
+<Box container='true' sx={{display:'flex', justifyContent:{sm:'flex-end'}}}>
 
 <Box sx={{width: {md:'70%',sm:"62%",xs:'100%'}}}>
   <MainContent />
