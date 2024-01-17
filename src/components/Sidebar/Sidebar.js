@@ -67,7 +67,7 @@ const handleMore = () => {
 
 
 {more ?  <List>
-        {['Inbox', 'Starred', 'Drafts', "Extend"].map((text, index) => (
+        {['Inbox', 'Sent', 'Drafts','Labels','Categories', "Extend"].map((text, index) => (
           <ListItem key={text} disablePadding>
            <ListItemButton onClick={ text === "Extend" ? handleMore : null}>
               <ListItemIcon sx={text === 'Extend' ? { color: theme.palette.error.main } : {color: theme.palette.text.main }} >
@@ -78,7 +78,7 @@ const handleMore = () => {
           </ListItem>
         ))}
       </List> : <List>
-        {['Inbox', 'Starred', 'Drafts', "More"].map((text, index) => (
+        {['Inbox', 'Sent', 'Drafts','Labels','Categories', "More"].map((text, index) => (
           <ListItem key={text} disablePadding>
            <ListItemButton onClick={ text === 'More' ? handleMore : null}>
               <ListItemIcon sx={{ color: 'white' }}>
