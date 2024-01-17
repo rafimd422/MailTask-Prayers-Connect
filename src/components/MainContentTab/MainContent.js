@@ -6,7 +6,7 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import MailList from '../MailList/MailList';
 
-const MainContent = () => {
+const MainContent = ({searchValue}) => {
   const [value, setValue] = React.useState('1');
 
   const handleChange = (event, newValue) => {
@@ -22,7 +22,7 @@ const MainContent = () => {
           </TabList>
         </Box>
         <TabPanel value="1">
-          <MailList />
+          <MailList searchValue={searchValue} />
         </TabPanel>
       </TabContext>
     </Box>

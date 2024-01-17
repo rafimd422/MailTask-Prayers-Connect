@@ -13,7 +13,7 @@ const top100Films = [
   { title: 'Microsoft', key: 1 },
 ];
 
-const SearchAutoComplate = () => {
+const SearchAutoComplate = ({setSearchValue}) => {
   const [value, setValue] = React.useState(null);
   const [options, setOptions] = React.useState(top100Films);
 
@@ -93,7 +93,7 @@ const SearchAutoComplate = () => {
           <SearchIconWrapper>
             <SearchIcon />
           </SearchIconWrapper>
-          <TextField {...params} label="Search" placeholder="Search…" />
+          <TextField {...params} onChange={(e)=>{setSearchValue(e.target.value)}} label="Search" placeholder="Search…" />
         </Box>
       )}
     />

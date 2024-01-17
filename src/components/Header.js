@@ -30,7 +30,7 @@ const Search = styled('div')(({ theme }) => ({
   },
 }));
 
-const Header = () => {
+const Header = ({setSearchValue}) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -130,7 +130,7 @@ const Header = () => {
 
           <Search>
            
-    <SearchAutoComplate />
+    <SearchAutoComplate setSearchValue={setSearchValue} />
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>

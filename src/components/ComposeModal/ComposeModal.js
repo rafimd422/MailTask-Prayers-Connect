@@ -89,7 +89,7 @@ const ComposeModal = () => {
         <TextareaAutosize
       minRows={3}
       variant="standard"
-      style={{ width: '98%',height:'200px', resize:'none', marginTop:'0.6rem' }}
+      style={{ width: '98%',height:'200px', resize:'none', marginTop:'0.6rem', border:'none' }}
     />
   </DialogContent>
 <Box sx={{display:'flex', justifyContent:'space-between'}}>

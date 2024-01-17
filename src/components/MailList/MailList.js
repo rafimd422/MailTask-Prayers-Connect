@@ -34,7 +34,7 @@ import { Avatar, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typ
           "image": "https://example.com/images/emily_white_avatar.jpg"
         },
         {
-          "id": "4",
+          "id": "5",
           "senderName": "Prayers Connect",
           "senderEmail": "prayersconnect@example.com",
           "subject": "Important Announcement",
@@ -43,11 +43,16 @@ import { Avatar, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typ
         }
       ]
 
-const MailList = () => {
-  return (
+const MailList = ({searchValue}) => {
+
+  const filteredEmail = searchValue !== null
+  ? emails.filter((mail) => mail?.senderName.toLowerCase().includes(searchValue.toLowerCase()))
+  : emails;
+
+return (
 <>
 <List>
-  {emails.map((mail) => (
+  {filteredEmail.map((mail) => (
     <ListItem key={mail.id} disablePadding sx={{ background: 'white', borderRadius: '8px', marginBottom: '8px' }}>
       <ListItemButton>
         <ListItemIcon>

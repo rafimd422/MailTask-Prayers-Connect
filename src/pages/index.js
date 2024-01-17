@@ -2,7 +2,8 @@ import MainContent from '@/components/MainContentTab/MainContent';
 import { Box } from '@mui/system';
 import Head from 'next/head';
 
-export default function Home() {
+export default function Home({searchValue}) {
+
   return (
     <>
       <Head>
@@ -13,11 +14,10 @@ export default function Home() {
       </Head>
 <Box container='true' sx={{display:'flex', justifyContent:{sm:'flex-end'}}}>
 
-<Box sx={{width: {md:'70%',sm:"62%",xs:'100%'}}}>
-  <MainContent />
+<Box sx={{width:{xl:'84%',lg:'81%',md:'75%',sm:"62%",xs:'100%'}}}>
+  <MainContent searchValue={searchValue} />
 </Box>
 </Box>
-
     </>
   );
 }
