@@ -5,7 +5,7 @@ import { Avatar, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typ
           "id": "1",
           "senderName": "Hackerrank",
           "senderEmail": "hackerrank@example.com",
-          "subject": "Meeting Tomorrow",
+          "subject": "Your HackerRank Certification test is available for retake!",
           "time": "5 hours ago",
           "image": "https://i.ibb.co/C0L7qfS/800px-Hacker-Rank-Icon-1000px.png"
         },
@@ -21,7 +21,7 @@ import { Avatar, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typ
           "id": "5",
           "senderName": "Prayers Connect",
           "senderEmail": "prayersconnect@example.com",
-          "subject": "Important Announcement",
+          "subject": "'thehungrycoder' added you to the 'Prayers Connect - Mosques and Iqamah Discovery' team 'Intb23q1'",
           "time": "3 days ago",
           "image": "https://i.ibb.co/ykpYYdy/prayers-connect-logo.jpg"
         },

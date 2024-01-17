@@ -12,6 +12,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import SearchAutoComplate from './Search/Search';
 import Sidebar from './Sidebar/Sidebar';
+import UserProfile from './UserProfile/UserProfile';
 
 // search component
 const Search = styled('div')(({ theme }) => ({
@@ -71,8 +72,10 @@ const Header = ({setSearchValue}) => {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={handleMenuClose} sx={{background:'#e9eef6',p:'10px'}}>
+        <UserProfile />
+      </MenuItem>
+      
     </Menu>
   );
 
